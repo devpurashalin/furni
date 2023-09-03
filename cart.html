@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/689d5e86e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg p-2 position-fixed w-100 top-0">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 fw-2 fs-2 text-white" href="index.html">Furni.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="contact-us.html">Contact us</a>
+                    </li>
+                    <li class="nav-item d-flex gap-2">
+                        <a class="nav-link" href=""><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-darkgreen text-white p-5" style="height: 50vh;">
+        <div class="h1 mt-5 p-5">Checkout</div>
+    </div>
+
+    <form action="checkout.html" class="p-md-5 mx-md-5">
+        <table width="100%">
+            <thead>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Remove</th>
+            </thead>
+            <tr>
+                <td><img src="https://themewagon.github.io/furni/images/product-1.png" alt="" class="w-100"></td>
+                <td class="p-name fw-bold">Product 1</td>
+                <td>$<span class="price">49.00</span></td>
+                <td>
+                    <button class="btn fw-bolder fs-5" type="button" onclick="decreament(this)">-</button>
+                    <input type="text" value="1" class="input quantity border-0 text-center">
+                    <button class="btn fw-bolder fs-5" type="button" onclick="increament(this)">+</button>
+                </td>
+                <td class="p-total">$49.00</td>
+                <td><button id="0" class="btn fw-bolder fs-4" type="button" onclick="remove(this)">x</button></td>
+            </tr>
+            <tr>
+                <td><img src="https://themewagon.github.io/furni/images/product-2.png" alt="" class="w-100"></td>
+                <td class="p-name fw-bold">Product 2</td>
+                <td>$<span class="price">49.00</span></td>
+                <td>
+                    <button class="btn fw-bolder fs-5" type="button" onclick="decreament(this)">-</button>
+                    <input type="text" value="1" class="input quantity border-0 text-center">
+                    <button class="btn fw-bolder fs-5" type="button" onclick="increament(this)">+</button>
+                </td>
+                <td class="p-total">$49.00</td>
+                <td><button id="1" class="btn fw-bolder fs-4" type="button" onclick="remove(this)">x</button></td>
+            </tr>
+        </table>
+
+        <div class="row justify-content-between">
+            <div class="col-lg-6 col-sm-12">
+                <div class="d-flex justify-content-between p-5">
+                    <button type="button" class="btn btn-dark rounded-pill py-2 px-4" onclick="updateCart()">Update
+                        Cart</button>
+                    <button type="button" class="btn btn-dark rounded-pill py-2 px-4"
+                        onclick="location.href = 'shop.html';">Continue Shopping</button>
+                </div>
+                <div class="px-5">
+                    <div class="h4">Coupon</div>
+                    <div class="t-dark">Enter your coupon code if you have one.</div>
+                    <div class="d-flex mt-4 gap-3">
+                        <input type="text" class="w-75 form-control p-2" placeholder="Coupon Code">
+                        <button class="btn btn-dark rounded-pill col-4 p-2" type="button">Apply Coupon</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 p-5 text-center">
+                <div class="h3 text-uppercase">cart totals</div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <p>Subtotal</p>
+                    <p class="fw-bold" id="subtotal">$230.00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Total</p>
+                    <p class="fw-bold" id="total">$230.00</p>
+                </div>
+                <button type="submit" onclick="checkout()" class="btn btn-dark rounded-pill mt-3 py-3 px-4">Proceed To
+                    Checkout</button>
+            </div>
+        </div>
+    </form>
+
+    <footer class="pt-5 mt-5 bg-white">
+        <div class="row pt-5 px-md-5 mx-md-5 mx-sm-0 justify-content-between" style="height: 200px;">
+            <div class="col-7">
+                <div class="h5 t-dark"><i class="t-dark fa-regular fa-envelope"></i> Subscribe to Newsletter</div>
+                <form action="" class="form-control border-0 bg-transparent d-flex gap-3">
+                    <input name="name" autocomplete="on" id="name"
+                        class="w-50 rounded border-1 bg-transparent border-secondary-subtle px-2" type="text"
+                        placeholder="Enter your name">
+                    <input name="email" id="email" autocomplete="on"
+                        class="w-50 rounded border-1 bg-transparent border-secondary-subtle px-2" type="email"
+                        placeholder="Enter your email">
+                    <button class="rounded border-1 border-secondary-subtle" type="submit"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+            <div class="col-4">
+                <img class="w-100 position-relative bottom-50" src="https://themewagon.github.io/furni/images/sofa.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="row px-md-5 mx-md-5 mx-sm-0 ">
+            <div class="col-lg-4 col-md-12">
+                <div class="h2">Furni.</div>
+                <br>
+                <div class="t-dark">
+                    Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam
+                    ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant
+                </div>
+                <div class="d-flex pt-3">
+                    <i class="m-1 p-3 bg-hover fa fa-facebook"></i>
+                    <i class="m-1 p-3 bg-hover fa fa-twitter"></i>
+                    <i class="m-1 p-3 bg-hover fa fa-instagram"></i>
+                    <i class="m-1 p-3 bg-hover fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="col-lg pt-5 col-sm row">
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">About us</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Services</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Blog</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">Support</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Knowledge base</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Live chat</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">Jobs</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Our Team</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Leadership</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">Nordic Chair</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Kruzo Aero</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Ergonomic Chair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex p-md-5 mx-md-5 mx-sm-0 justify-content-between t-dark">
+            <div>
+                Copyright ©2023. All Rights Reserved. — Designed with love by Untree.co
+                <br>
+                Distributed By ThemeWagon
+            </div>
+            <div>
+                <a href="" class="text-decoration-none t-dark p-2">Terms & Conditions</a>
+                <a href="" class="text-decoration-none t-dark p-2">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

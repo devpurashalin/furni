@@ -1,0 +1,19 @@
+input,
+select {
+    padding: 12px !important;
+    margin: 10px;
+}
+
+th,
+td {
+    padding: 25px;
+}
+
+thead {
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+}
+
+tr {
+    margin: 20px 0px;
+}

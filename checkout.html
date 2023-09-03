@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/689d5e86e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <script src="js/checkout.js"></script>
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg p-2 position-fixed w-100 top-0">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 fw-2 fs-2 text-white" href="index.html">Furni.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="contact-us.html">Contact us</a>
+                    </li>
+                    <li class="nav-item d-flex gap-2">
+                        <a class="nav-link" href=""><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="bg-darkgreen text-white p-5" style="height: 50vh;">
+        <div class="h1 mt-5 p-5">Checkout</div>
+    </div>
+
+
+    <div class="border border-2 t-dark px-5 py-3 mx-5" style="margin-top: 50px;">
+        Returning customer? <a href="" class="t-dark">Click here</a> to login
+    </div>
+
+    <form action="thankyou.html" method="get">
+        <div class="row mx-0 justify-content-center">
+            <div class="col-md-6 col-sm-12 ps-md-5 py-5">
+                <div class="h2">Billing Details</div>
+                <div class="bg-white p-md-5">
+                    <div class="form-group">
+                        <label for="Country">Country <span class="text-danger">*</span></label>
+                        <select name="Country" id="country" class="form-control" required>
+                            <option value="" disabled selected>Select a Country</option>
+                            <option value="India">India</option>
+                            <option value="Australia">Australia</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="Germany">Germany</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="fname">First Name <span class="text-danger">*</span></label>
+                            <input type="text" name="fname" class="form-control" required>
+                        </div>
+                        <div class="col form-group">
+                            <label for="lname">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" name="lname" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname">Company Name</label>
+                        <input type="text" name="cname" class="form-control" id="cname">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address <span class="text-danger">*</span></label>
+                        <input type="text" name="" id="address1" class="form-control" placeholder="Streat Address">
+                        <input type="text" name="" id="address2" class="form-control"
+                            placeholder="Apartment, suite, unit, etc (optional)">
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="state">State / Country <span class="text-danger">*</span></label>
+                            <input type="text" name="state" class="form-control" required>
+                        </div>
+                        <div class="col form-group">
+                            <label for="zip">Posta / Zip <span class="text-danger">*</span></label>
+                            <input type="text" name="zip" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="email">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="col form-group">
+                            <label for="phone">Phone <span class="text-danger">*</span></label>
+                            <input type="number" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex">
+                        <input type="checkbox"  name="createaccount" id="createaccount"
+                            onclick="additional(this.parentElement, 'password')">
+                        <label for="createaccount">Create an account?</label>
+                    </div>
+                    <div class="t-dark" style="display: none;">
+                        <p>
+                            Create an account by entering the information below. If you are a returning customer please
+                            login at the top of the page.
+                        </p>
+                        <label for="password">Password <span class="text-danger">*</span></label>
+                        <input class="form-control" type="password" name="" id="password">
+
+                    </div>
+                    <div class="form-group d-flex">
+                        <input type="checkbox"  name="differentaddress" id="differentaddress"
+                            onclick="additional(this.parentElement)">
+                        <label for="differentaddress">Ship To A Different Address?</label>
+                    </div>
+                    <div style="display: none;">
+                        <div class="form-group">
+                            <label for="Country">Country <span class="text-danger">*</span></label>
+                            <select name="Country" id="dcountry" class="delivery form-control">
+                                <option value="" disabled selected>Select a Country</option>
+                                <option value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="Germany">Germany</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <label for="fname">First Name <span class="text-danger">*</span></label>
+                                <input type="text" name="fname" class="delivery form-control">
+                            </div>
+                            <div class="col form-group">
+                                <label for="lname">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" name="lname" class="delivery form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cname">Company Name</label>
+                            <input type="text" name="cname" class="form-control" id="dcname">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address <span class="text-danger">*</span></label>
+                            <input type="text" name="" id="daddress1" class="delivery form-control" placeholder="Streat Address">
+                            <input type="text" name="" id="daddress2" class="form-control"
+                                placeholder="Apartment, suite, unit, etc (optional)">
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <label for="state">State / Country <span class="text-danger">*</span></label>
+                                <input type="text" name="state" class="delivery form-control">
+                            </div>
+                            <div class="col form-group">
+                                <label for="zip">Posta / Zip <span class="text-danger">*</span></label>
+                                <input  type="text" name="zip" class="delivery form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <label for="email">Email Address <span class="text-danger">*</span></label>
+                                <input  type="email" name="email" class="delivery form-control">
+                            </div>
+                            <div class="col form-group">
+                                <label for="phone">Phone <span class="text-danger">*</span></label>
+                                <input  type="number" name="phone" class="delivery form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="note">Order Notes</label>
+                        <textarea class="form-control" name="note" id="note" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 pe-md-5 py-5">
+                <div class="h2">Coupon</div>
+                <div class="bg-white p-md-5">
+                    <div class="t-dark">Enter your coupon code if you have one</div>
+                    <div class="d-flex">
+                        <input type="text" name="coupon" id="coupon" class="w-75 form-control">
+                        <button type="button" class="p-2 btn btn-dark rounded-pill w-25">Apply</button>
+                    </div>
+                </div>
+                <div class="h2 mt-5">Your Order</div>
+                <div class="bg-white p-md-5">
+                    <table id="product" class="w-100">
+                        <thead>
+                            <th>Product</th>
+                            <th>Total</th>
+                        </thead>
+                    </table>
+                    <div>
+                        <div class="border border-2 m-1 my-4 p-2">
+                            <button class="btn fw-bold w-100 text-start text-decoration-underline" type="button"
+                                onclick="expand(this)">
+                                Direct Bank Transfer
+                            </button>
+                            <p style="display: none;">
+                                Make your payment directly into our bank account. Please use your Order ID as the
+                                payment reference.
+                                Your order won’t be shipped until the funds have cleared in our account.
+                            </p>
+                        </div>
+                        <div class="border border-2 m-1  p-2">
+                            <button class="btn fw-bold w-100 text-start text-decoration-underline" type="button"
+                                onclick="expand(this)">
+                                Cheque Payment
+                            </button>
+                            <p style="display: none;">
+                                Make your payment directly into our bank account. Please use your Order ID as the
+                                payment reference.
+                                Your order won’t be shipped until the funds have cleared in our account.
+                            </p>
+                        </div>
+                        <div class="border border-2 m-1 my-4 p-2">
+                            <button class="btn fw-bold w-100 text-start text-decoration-underline" type="button"
+                                onclick="expand(this)">
+                                Paypal
+                            </button>
+                            <p style="display: none;">
+                                Make your payment directly into our bank account. Please use your Order ID as the
+                                payment reference.
+                                Your order won’t be shipped until the funds have cleared in our account.
+                            </p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark rounded-pill p-3">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <footer class="pt-5 mt-5 bg-white">
+        <div class="row pt-5 px-md-5 mx-md-5 mx-sm-0 justify-content-between" style="height: 200px;">
+            <div class="col-7">
+                <div class="h5 t-dark"><i class="t-dark fa-regular fa-envelope"></i> Subscribe to Newsletter</div>
+                <form action="" class="form-control border-0 bg-transparent d-flex gap-3">
+                    <input class="w-50 rounded border-1 bg-transparent border-secondary-subtle px-2" type="text"
+                        placeholder="Enter your name">
+                    <input class="w-50 rounded border-1 bg-transparent border-secondary-subtle px-2" type="email"
+                        placeholder="Enter your email">
+                    <button class="rounded border-1 border-secondary-subtle" type="submit"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+            <div class="col-4">
+                <img class="w-100 position-relative bottom-50" src="https://themewagon.github.io/furni/images/sofa.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="row px-md-5 mx-md-5 mx-sm-0 ">
+            <div class="col-lg-4 col-md-12">
+                <div class="h2">Furni.</div>
+                <br>
+                <div class="t-dark">
+                    Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam
+                    ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant
+                </div>
+                <div class="d-flex pt-3">
+                    <i class="m-1 p-3 bg-hover fa fa-facebook"></i>
+                    <i class="m-1 p-3 bg-hover fa fa-twitter"></i>
+                    <i class="m-1 p-3 bg-hover fa fa-instagram"></i>
+                    <i class="m-1 p-3 bg-hover fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="col-lg pt-5 col-sm row">
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">About us</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Services</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Blog</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">Support</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Knowledge base</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Live chat</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">Jobs</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Our Team</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Leadership</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg col-sm-5">
+                    <ul class="list-style-none lh-lg">
+                        <li><a href="" class="text-decoration-none t-dark">Nordic Chair</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Kruzo Aero</a></li>
+                        <li><a href="" class="text-decoration-none t-dark">Ergonomic Chair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex p-md-5 mx-md-5 mx-sm-0 justify-content-between t-dark">
+            <div>
+                Copyright ©2023. All Rights Reserved. — Designed with love by Untree.co
+                <br>
+                Distributed By ThemeWagon
+            </div>
+            <div>
+                <a href="" class="text-decoration-none t-dark p-2">Terms & Conditions</a>
+                <a href="" class="text-decoration-none t-dark p-2">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

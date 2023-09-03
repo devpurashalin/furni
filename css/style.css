@@ -1,0 +1,97 @@
+:root {
+    --bg: #3b5d50;
+}
+
+body {
+    background-color: #eff2f1;
+}
+
+nav {
+    background-color: var(--bg);
+    z-index: 5;
+}
+
+.nav-link {
+    color: #ccc;
+    margin: 0px 8px;
+}
+
+.nav-link:hover,
+nav .active {
+    color: white !important;
+    border-bottom: 5px solid orange;
+}
+
+.nav-link:hover {
+    transition-timing-function: ease;
+    transition-duration: 2s;
+}
+
+.bg-darkgreen {
+    background-color: var(--bg);
+}
+
+.t-dark {
+    color: #6a6a6a;
+}
+
+.grid-2 {
+    top: 0;
+    left: 62%;
+}
+
+.grid-3 {
+    top: 50%;
+    left: 45%;
+}
+
+.list-style-circle {
+    list-style-type: circle;
+}
+
+.list-style-none {
+    list-style-type: none;
+}
+
+.bg-hover {
+    background-color: #dce5e4;
+    border-radius: 50%;
+}
+
+.bg-hover:hover {
+    background-color: var(--bg);
+    color: white;
+}
+
+footer button[type='submit'] {
+    background-color: var(--bg);
+    color: #dce5e4;
+    padding: 10px;
+    width: 65px;
+}
+
+.team-lh {
+    line-height: 27px;
+    font-size: small;
+}
+
+.product-detail:hover {
+    background: linear-gradient(180deg, transparent 0%, transparent 50%, #dce5e4 50%, #dce5e4 100%);
+    border-radius: 30px;
+
+}
+
+.product-detail:hover img {
+    transform: scale(1.1);
+}
+
+.product-detail:hover .add {
+    display: inline-block;
+    background-color: #6c757d;
+}
+
+.add {
+    position: relative;
+    display: none;
+    top: 4%;
+}

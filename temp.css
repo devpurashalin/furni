@@ -1,0 +1,23 @@
+body {
+    background-color: aqua;
+}
+
+.carousel-item {
+    height: 90vh;
+    position: relative;
+}
+
+/* .slide-1 {
+    background-image: url("https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+.slide-2 {
+    background-image: url("https://images.unsplash.com/photo-1603357465999-241beecc2629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=932&q=80");
+    background-size: cover;
+}
+
+.slide-3 {
+    background-image: url("https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+} */
